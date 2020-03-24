@@ -1,4 +1,24 @@
-language: php
+sudo: false
 
-php:
-  - 7.2
+language: node_js
+node_js:
+  - 10
+
+dist: trusty
+
+addons:
+  sonarcloud:
+    organization: "egusakov"
+    token:
+      secure: "784XldopXojv313XfDt4T9jCgMBUYPGU+AHHjZkGty4dsmixWttDdMdZ4sGWcYxG0iygob1wPNuMQrip/8NHPQPlbggMr17s1Oysabd5CICuSs2SwWFZoBA5UvMx/XC6y4MxmBVYhfiAeXw7UZbiOCtKexfP5AMKbFvjwAeiZ4TwpvW7rZXSWGISUtxqmA1hummojkg/e5e6FPO3njCO0Pfpe3Phep9iiY2Oyc3Jxwhb1vuq+hMzEBR+Dkl5J3ExhsD9QbIfbzCD58TjH36eSDTDzET5VJ0dyXVYKXEuA4VIpFizh6kEL4hH85K8JyN1mD7sMoqLbUYaY86Fki++QNVCyc1aAj2xRMkseACHVqnAEEvGyWD01xnIJrq8V8eQk9P7DHU2YsmuAxcY6n3k542UvaRUZIQNJdvQnlXUUNaBffqZFGdWST9hDbXF/PNTqgfWI2cCcr6LdA5Q4bmPYqw5OXoVTx15ub8r65wQHeFa8RAZ81xzxiFZcWQX5FeIxpe6GSzgSSIc79H3Rc4RE3AQBOnABeFbTAMGvb0Q0vHCAFY7c1EEmiPQEqbUTnomrckfebUnSHpKq+5TIb7rSBpgsRwfwi2gbzrA5ZWIUVEZ2YT26iWKL7y/b51cgRy2VIley3J9yCxHhgup3Lwpz1j0dOMgoKn5DXe5pIZbQ40=" # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  # - sonar-scanner
+
+# script: "sbt clean coverage test"
+# after_success: "sbt coverageReport coveralls"
+
+  # travis encrypt c728b45e4215ad6779702565c509c650c868790f
+  # https://sonarcloud.io/project/configuration?analysisMode=GitHubTravis&id=egusakov_laba4
+  # https://travis-ci.com/account/preferences

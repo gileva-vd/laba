@@ -1,0 +1,16 @@
+{
+  "name": "pr5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "coveralls": "^3.0.11",
+    "cucumber": "^6.0.5"
+  }
+}
