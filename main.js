@@ -8,7 +8,7 @@ module.exports = {
 
   addToCart: function (price) {
     this.totalCount += price
-  },
+  }, 
 
   deleteToCart: function(price) {
     if(typeof price === 'number' && price <= this.totalCount) {
